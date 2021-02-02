@@ -1,0 +1,15 @@
+{
+  "plugins": {
+    "tailwindcss": {},
+    "postcss-font-magician": {
+      "variants": {
+        "Alata": {
+          "400": []
+        },
+        "Josefin Sans": {
+          "300": []
+        }
+      }
+    }
+  }
+}
