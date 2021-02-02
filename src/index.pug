@@ -9,8 +9,8 @@ html(lang="en")
     title Frontend Mentor | Loopstudios landing page
 
     link(rel="stylesheet", href="css/app.pcss")
-  body.font-sans.text-body
-    div.px-6
+  body.font-sans.text-body.leading-6
+    div.px-6.mb-24
       div.mb-12
         img(src='images/mobile/image-interactive.jpg' alt='interactive')
       div.title.text-center.text-3xl.leading-8.px-6.mb-6 The leader in interactive VR
@@ -19,39 +19,77 @@ html(lang="en")
         projects for some of the best companies around the globe. Our award-winning 
         creations have transformed businesses through digital experiences that bind 
         to their brand.
+    div.px-12.mb-12
+      div.title.text-center.text-3xl.leading-8.mb-6 Our creations
+    -
+      const creations = [{
+        image: 'image-deep-earth.jpg',
+        label: 'Deep earth'
+      }, {
+        image: 'image-night-arcade.jpg',
+        label: 'Night arcade'
+      }, {
+        image: 'image-soccer-team.jpg',
+        label: 'Soccer team VR'
+      }, {
+        image: 'image-grid.jpg',
+        label: 'The grid'
+      }, {
+        image: 'image-from-above.jpg',
+        label: 'From up above VR'
+      }, {
+        image: 'image-pocket-borealis.jpg',
+        label: 'Pocket borealis'
+      }, {
+        image: 'image-curiosity.jpg',
+        label: 'The curiosity'
+      }, {
+        image: 'image-fisheye.jpg',
+        label: 'Make it fisheye'
+      }]
+    each creation in creations
+      div.px-6.mb-6
+        a.block.relative(href='#')
+          img(src='images/mobile/' + creation.image alt='deep earth')
+          div.absolute.top-0.left-0.h-full.w-full.bg-gradient-to-r.from-transparent-black.to-transparent
+          div.title.absolute.text-white.text-2xl(style='left: 1.25rem; top: 3.3125rem; width: 8rem')= creation.label
+    div.px-6.mb-24.flex.justify-center
+      button.uppercase.border.border-black.tracking-wider(style='font-size: 12px; line-height: 1em; letter-spacing: .45em; padding: .875rem 2.75rem') See all
+    footer.bg-black.text-white(style='padding: 3.5rem 0')
+      div.text-center.mb-10
+        img.inline(src='images/logo.svg' alt='loopstudios' width='145')
+      div.text-center(style='margin-bottom: 3.125rem')
+        -
+          const footerLinks = [{
+            label: 'About'
+          }, {
+            label: 'Careers'
+          }, {
+            label: 'Events'
+          }, {
+            label: 'Products'
+          }, {
+            label: 'Support'
+          }]
+        ul
+          each link in footerLinks
+            li(style='margin-bottom: 1.875rem')
+              a(href='#')= link.label
+      div.mb-6
+        -
+          const socials = [{
+            image: 'icon-facebook.svg'
+          }, {
+            image: 'icon-twitter.svg'
+          }, {
+            image: 'icon-pinterest.svg'
+          }, {
+            image: 'icon-instagram.svg'
+          }]
+        ul.flex.justify-center
+          each social in socials
+            li.mx-2
+              a(href='#')
+                img(src='images/' + social.image alt=social.image)
+      div.text-dark-gray.text-center.text-xs.leading-none &copy; 2021 Loopstudios. All rights reserved.
 
-  //- About
-  //- Careers
-  //- Events
-  //- Products
-  //- Support
-
-  //- Immersive experiences that deliver
-
-  //- The leader in interactive VR
-
-  //- Founded in 2011, Loopstudios has been producing world-class virtual reality 
-  //- projects for some of the best companies around the globe. Our award-winning 
-  //- creations have transformed businesses through digital experiences that bind 
-  //- to their brand.
-
-  //- Our creations
-
-  //- See all
-
-  //- Deep earth
-  //- Night arcade
-  //- Soccer team VR
-  //- The grid
-  //- From up above VR
-  //- Pocket borealis
-  //- The curiosity
-  //- Make it fisheye
-
-  //- About
-  //- Careers
-  //- Events
-  //- Products
-  //- Support
-
-  //- © 2021 Loopstudios. All rights reserved.
