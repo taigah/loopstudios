@@ -1,7 +1,16 @@
 @tailwind base;
 
+body, html {
+  @apply h-full;
+}
+
 .title {
   @apply font-title uppercase;
+}
+
+/** On pourrait utiliser la configuration de tailwind mais parcel ne résout pas bien le fichier **/
+.bg-hero-mobile {
+  background: url(/images/mobile/image-hero.jpg);
 }
 
 @tailwind components;

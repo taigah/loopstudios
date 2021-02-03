@@ -619,9 +619,19 @@ video {
   height: auto;
 }
 
+body, html {
+  height: 100%;
+}
+
 .title {
   font-family: "Josefin Sans", sans;
   text-transform: uppercase;
+}
+
+/** On pourrait utiliser la configuration de tailwind mais parcel ne résout pas bien le fichier **/
+
+.bg-hero-mobile {
+  background: url(/image-hero.1839d237.jpg);
 }
 
 .container {
@@ -16610,6 +16620,10 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-hero-logo {
+  width: 9rem;
 }
 
 .z-0 {
@@ -35548,6 +35562,10 @@ video {
     width: 100vw;
   }
 
+  .sm_w-hero-logo {
+    width: 9rem;
+  }
+
   .sm_z-0 {
     z-index: 0;
   }
@@ -54452,6 +54470,10 @@ video {
 
   .md_w-screen {
     width: 100vw;
+  }
+
+  .md_w-hero-logo {
+    width: 9rem;
   }
 
   .md_z-0 {
@@ -73360,6 +73382,10 @@ video {
     width: 100vw;
   }
 
+  .lg_w-hero-logo {
+    width: 9rem;
+  }
+
   .lg_z-0 {
     z-index: 0;
   }
@@ -92264,6 +92290,10 @@ video {
 
   .xl_w-screen {
     width: 100vw;
+  }
+
+  .xl_w-hero-logo {
+    width: 9rem;
   }
 
   .xl_z-0 {

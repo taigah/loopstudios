@@ -10,6 +10,42 @@ html(lang="en")
 
     link(rel="stylesheet", href="css/app.pcss")
   body.font-sans.text-body.leading-6
+    //- Hero
+    div.bg-hero-mobile.h-full.bg-cover.flex.items-center.items-start.relative.text-white(
+        style='padding: 2.5rem 1.4375rem'
+      ).text-white
+      //- Top menu
+      div.absolute.top-0.left-0.w-full.flex.pt-10.px-6.justify-between.z-20
+        div
+          a(href='/')
+            img.w-hero-logo(src='images/logo.svg' alt='loopstudios')
+        div
+          img(src='images/icon-hamburger.svg' alt='hamburger')
+          //- img(src='images/icon-close.svg' alt='close')
+      //- Overlay 
+      div.z-10.bg-black.h-full.w-full.absolute.top-0.left-0.items-center.text-white.hidden
+        div.px-6.text-2xl.title
+          -
+            const menuItems = [{
+              label: 'About'
+            }, {
+              label: 'Careers'
+            }, {
+              label: 'Events'
+            }, {
+              label: 'Products'
+            }, {
+              label: 'Support'
+            }]
+          ul
+            for item in menuItems
+              li.my-6
+                a(href='#')= item.label
+      //- Hero text
+      div.border-2.border-white.text-white.title.uppercase(
+        style='font-size: 2.5rem; padding: 1.5625rem; line-height: 2.5rem;'
+      ) Immersive experiences that deliver
+
     div.px-6.mb-24
       div.mb-12
         img(src='images/mobile/image-interactive.jpg' alt='interactive')

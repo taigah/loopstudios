@@ -16,6 +16,9 @@ module.exports = {
         'dark-gray': 'hsl(0, 0%, 55%)',
         'very-dark-gray': 'hsl(0, 0%, 41%)',
         'transparent-black': 'rgba(0,0,0,.5)'
+      },
+      width: {
+        'hero-logo': '9rem'
       }
     },
   },
