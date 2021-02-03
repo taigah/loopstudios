@@ -142,11 +142,14 @@ var $heroButtonImg = $heroButton.querySelector('img');
 var menuIsOpened = false;
 
 function closeHeroMenu() {
+  document.body.classList.remove('overflow-hidden');
   $hero.classList.remove('hero__menu_opened');
   $heroButtonImg.src = _iconHamburger.default;
 }
 
 function openHeroMenu() {
+  document.body.classList.add('overflow-hidden');
+  $hero.classList.remove('hero__menu_opened');
   $hero.classList.add('hero__menu_opened');
   $heroButtonImg.src = _iconClose.default;
 }
@@ -208,7 +211,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34071" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35275" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

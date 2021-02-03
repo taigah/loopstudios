@@ -24,7 +24,7 @@ html(lang="en")
           img(src='images/icon-hamburger.svg' alt='hamburger')
           //- img(src='images/icon-close.svg' alt='close')
       //- Overlay 
-      div.z-10.bg-black.h-full.w-full.fixed.top-0.left-0.items-center.text-white.flex.hero__overlay
+      div.z-10.bg-black.h-full.w-full.absolute.top-0.left-0.items-center.text-white.flex.hero__overlay
         div.px-6.text-2xl.title
           -
             const menuItems = [{
@@ -93,9 +93,9 @@ html(lang="en")
     div.px-6.mb-24.flex.justify-center
       button.uppercase.border.border-black.tracking-wider(style='font-size: 12px; line-height: 1em; letter-spacing: .45em; padding: .875rem 2.75rem') See all
     footer.bg-black.text-white(style='padding: 3.5rem 0')
-      div.text-center.mb-10
+      div.text-center.mb-8
         img.inline(src='images/logo.svg' alt='loopstudios' width='145')
-      div.text-center(style='margin-bottom: 3.125rem')
+      div.text-center.mb-12
         -
           const footerLinks = [{
             label: 'About'
@@ -110,7 +110,7 @@ html(lang="en")
           }]
         ul
           each link in footerLinks
-            li(style='margin-bottom: 1.875rem')
+            li(style='margin-bottom: 1.25rem')
               a(href='#')= link.label
       div.mb-6
         -
@@ -128,5 +128,5 @@ html(lang="en")
             li.mx-2
               a(href='#')
                 img(src='images/' + social.image alt=social.image)
-      div.text-dark-gray.text-center.text-xs.leading-none &copy; 2021 Loopstudios. All rights reserved.
+      div.text-dark-gray.text-center.text-sm.leading-none &copy; 2021 Loopstudios. All rights reserved.
 

@@ -8,11 +8,14 @@ const $heroButtonImg = $heroButton.querySelector('img')
 let menuIsOpened = false
 
 function closeHeroMenu () {
+  document.body.classList.remove('overflow-hidden')
   $hero.classList.remove('hero__menu_opened')
   $heroButtonImg.src = hamburgerIcon
 }
 
 function openHeroMenu () {
+  document.body.classList.add('overflow-hidden')
+  $hero.classList.remove('hero__menu_opened')
   $hero.classList.add('hero__menu_opened')
   $heroButtonImg.src = closeIcon
 }

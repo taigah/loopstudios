@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx parcel src/index.pug",
-    "build": "npx parcel src/index.pug",
+    "build": "npx parcel build src/index.pug",
     "clean": "rm -r .cache dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
